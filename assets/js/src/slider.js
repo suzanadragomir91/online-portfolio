@@ -26,7 +26,21 @@ $(document).ready(function(){
 
 		});
 
-	}
+			var current_slide = 1;
+			var next_slide = 2;
+
+			function startSlider() {
+				count = $(".slides > img").size();
+
+				if(current_slide > count){
+					next_slide = 1;
+					current_slide = 1;
+				}
+
+					current_slide = next_slide;
+					next_slide = next_slide + 1;
+
 
 	slider();
+	startSlider();
 });
